@@ -1,0 +1,66 @@
+QuestaSim-64 qrun 2024.3_1 Utility 2024.10 Oct 17 2024
+Start time: 03:47:15 on Mar 08,2025
+qrun -batch -access=rw+/. -timescale 1ns/1ns -mfcu design.sv testbench.sv -voptargs="+acc=npr" "+testcase=test_concurrency" -do " run -all; exit" 
+Creating library 'qrun.out/work'.
+QuestaSim-64 vlog 2024.3_1 Compiler 2024.10 Oct 17 2024
+Start time: 03:47:16 on Mar 08,2025
+vlog -timescale 1ns/1ns -mfcu design.sv testbench.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+-- Compiling module async_fifo_grey
+-- Compiling module tb
+
+Top level modules:
+	tb
+End time: 03:47:16 on Mar 08,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2024.3_1 Compiler 2024.10 Oct 17 2024
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+Start time: 03:47:16 on Mar 08,2025
+vopt -access=rw+/. -timescale 1ns/1ns -mfcu "+acc=npr" -findtoplevels qrun.out/work+1+ -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+
+Top level modules:
+	tb
+
+Analyzing design...
+-- Loading module tb
+-- Loading module async_fifo_grey
+Optimizing 2 design-units (inlining 0/2 module instances):
+-- Optimizing module tb(fast)
+-- Optimizing module async_fifo_grey(fast)
+Optimized design name is qrun_opt
+End time: 03:47:16 on Mar 08,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 1
+# vsim -batch "+testcase=test_concurrency" -lib qrun.out/work -do " run -all; exit" -statslog qrun.out/stats_log qrun_opt -appendlog -l qrun.log 
+# Start time: 03:47:16 on Mar 08,2025
+# //  Questa Sim-64
+# //  Version 2024.3_1 linux_x86_64 Oct 17 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.async_fifo_grey(fast)
+# 
+# run -all
+# 
+# ** Testcase test_concurrency is executed successfully! **
+# 
+# ** Note: $finish    : async_fifo_grey_tb.v(120)
+#    Time: 400 ns  Iteration: 0  Instance: /tb
+# End time: 03:47:17 on Mar 08,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+End time: 03:47:17 on Mar 08,2025, Elapsed time: 0:00:02
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings:   0
+    vopt: Errors:   0, Warnings:   1
+    vsim: Errors:   0, Warnings:   0
+  Totals: Errors:   0, Warnings:   1

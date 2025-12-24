@@ -1,0 +1,75 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2024.3_1 2024.10, Oct 17 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/runner
+vasync_fifo_grey
+Z2 2design.sv|testbench.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1741423636
+!i10b 1
+!s100 UGX`;134na3@B5?KeC92J1
+IJEm56CDY:B1c;N83i;QTe0
+S1
+R1
+Z5 w1741423633
+8async_fifo_grey_d.v
+Fasync_fifo_grey_d.v
+!i122 0
+L0 2 102
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3_1;79
+r1
+!s85 0
+31
+Z8 !s108 1741423636.000000
+Z9 !s107 async_fifo_grey_d.v|async_fifo_grey_tb.v|testbench.sv|design.sv|
+Z10 !s90 -timescale|1ns/1ns|-mfcu|design.sv|testbench.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|
+!i113 0
+Z11 o-timescale 1ns/1ns -mfcu -work qrun.out/work
+Z12 tCvgOpt 0
+Tqrun_opt
+R4
+V9fNehebl_18mzOGkf]@NQ0
+04 2 4 work tb fast 0
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-access=rw+/. -timescale 1ns/1ns -mfcu +acc=npr -work qrun.out/work
+R12
+nqrun_opt
+OL;O;2024.3_1;79
+vtb
+R2
+R3
+R4
+!i10b 1
+!s100 3Bk]gzK5DQ0g?WbYeXQ<Z2
+IzTLgWzOoFc;M6XT9i:8ZM0
+S1
+R1
+R5
+8async_fifo_grey_tb.v
+Fasync_fifo_grey_tb.v
+!i122 0
+L0 2 121
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
